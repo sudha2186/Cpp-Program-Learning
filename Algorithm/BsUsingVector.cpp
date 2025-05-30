@@ -8,6 +8,8 @@ int binarySearch(vector<int> arr, int targ)
     while(st <= end)
     {
         int mid = (st + end) /2;
+        // To optimized it we use this formula of mid i.e. mid = st + (end - st)/2 to avoid overflow for int 
+        // Because in some platform the value for st, end can be INT_MAX so to add it , which is not possible so we use optimized formula
         if(arr[mid] < targ) {
             st = mid + 1;
         } else if (arr[mid] > targ) {
