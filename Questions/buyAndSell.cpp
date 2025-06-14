@@ -1,7 +1,7 @@
 #include <iostream>
 #include<vector>
 using namespace std;
-
+// time complexity O(n)
 int maxProfit(vector<int> prices) {
     int bestBuy = prices[0], maxProfit = 0;
 
