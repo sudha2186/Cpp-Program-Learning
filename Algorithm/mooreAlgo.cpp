@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+// Time complexity => O(n)
 int majorityElement(vector<int> nums) 
 {
     int n = nums.size();
