@@ -11,6 +11,7 @@ int majorityEle(vector<int> nums)
         }
         if(freq > nums.size() / 2) return val;
     }
+    return -1;
 }
 
 int main() {
