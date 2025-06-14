@@ -18,6 +18,13 @@ int majorityElement(vector<int> nums)
             freq--;
         }
     }
+    // for the case where majority element do not exist
+    int count = 0;
+    for (int val : nums) {
+        if(val == ans) count++;
+    }
+    if(count > n/2) return ans;
+    else return -1;
     return ans;
 }
 int main() {
