@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+// Time complexity => O(m+n); Space complexity => O(1)
 void merge(vector<int> &A, int m, vector<int> &B, int n) 
 {
     int idx = m + n - 1, i = m - 1, j = n - 1;
