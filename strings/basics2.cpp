@@ -12,7 +12,9 @@ int main() {
     string str;
     // cin >> str; // ex: hello world => output: hello 
     getline(cin, str);
-    cout << "output: " << str << endl;  
-
+    for(char val : str)
+    {
+        cout << val << " ";
+    }
     return 0;
 }
