@@ -3,6 +3,7 @@
 using namespace std;
 
 // Time complexity=> o(n log(log n)) better than o(n log n)
+// Sieve of Erastothenes
 int countPrimes(int n) {
     if (n <= 2) return 0;
 
