@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// TC => O(log n) base 10 
 bool armstrongNum(int n) 
 {
     int dig, num = 0, tmp = n;
