@@ -3,7 +3,8 @@
 #include <set>
 #include <algorithm>
 using namespace std;
-// TC => O(n^3) + O(nlogn n) 
+// TC => O(n^3) * O(logn n) => O(n^3 log(unique triplets))
+// SC => O(unique triplets * 2) => O(unique triplets) 
 vector<vector<int>> threeSum(vector<int>& nums) {
     int n = nums.size();
     vector<vector<int>> ans;
