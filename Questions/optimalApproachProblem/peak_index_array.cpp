@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+// Binary search approach TC => O(logn)
 int peakIndexInMountainArray(vector<int>& arr) {
     int st = 1, end = arr.size() - 2;
     while(st <= end) {
