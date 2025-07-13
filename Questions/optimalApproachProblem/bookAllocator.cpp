@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <climits>
 using namespace std;
 // same problem as painter partition 
 //TC => O(n logn); sc => O(1)
@@ -22,11 +24,12 @@ bool isValid(vector<int> arr, int n, int m, int max) {
 
 int allocate(vector<int> arr, int n, int m)
 {
-    int sum = 0;
+    int sum = 0, maxVal = INT_MIN;
     for(int i = 0; i < n; i++) {
         sum += arr[i];
+        maxVal = max(maxVal, arr[i]);
     }
-    int st = 0, end = sum;
+    int st = maxVal, end = sum;
     int ans = -1;
     while (st <= end)
     {
