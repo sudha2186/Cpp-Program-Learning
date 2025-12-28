@@ -5,12 +5,12 @@
 using namespace std;
 // same problem as painter partition 
 //TC => O(n logn); sc => O(1)
-bool isValid(vector<int> arr, int n, int m, int max) {
+bool isValid(vector<int> arr, int n, int m, int mid) {
     int stu = 1, pages = 0;
     for(int i = 0; i < n; i++) {
-        if(arr[i] > max) return false;
+        if(arr[i] > mid) return false;
 
-        if(pages + arr[i] <= max) {
+        if(pages + arr[i] <= mid) {
             pages += arr[i];
         } else {
             stu++;
@@ -24,12 +24,12 @@ bool isValid(vector<int> arr, int n, int m, int max) {
 
 int allocate(vector<int> arr, int n, int m)
 {
-    int sum = 0, maxVal = INT_MIN;
+    int sum = 0;
     for(int i = 0; i < n; i++) {
         sum += arr[i];
-        maxVal = max(maxVal, arr[i]);
+        // midVal = mid(midVal, arr[i]);
     }
-    int st = maxVal, end = sum;
+    int st = 0, end = sum;
     int ans = -1;
     while (st <= end)
     {
