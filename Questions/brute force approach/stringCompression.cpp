@@ -24,7 +24,6 @@ int stringCompression(vector<char> chars, int n )
     }
     chars.resize(idx);
     return chars.size();
-    
 }
 
 int main() {
